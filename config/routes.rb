@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'events#index'
+  resources :events
+  resources :users, only: [:show, :edit, :update]
 end
