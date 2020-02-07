@@ -18,17 +18,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <% if user_signed_in? %>
+              <%= link_to 'Профиль', current_user, class: 'nav-item nav-link' %>
+              <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>
+            <% else %>
+            <%= link_to 'Войти', new_user_session_path, class: 'nav-item nav-link'%>
+            <% end %>
           </div>
         </div>
       </div>
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-9">
+        <div class="col-12">
         <% if flash.any? %>
           <% flash.each do |name, message| %>
             <% if notice %>

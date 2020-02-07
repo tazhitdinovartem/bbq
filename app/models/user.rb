@@ -1,6 +1,17 @@
 class User < ApplicationRecord
-  EMAIL_VALIDATION_REGEXP = /.+@.+\..+/i
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+
   has_many :events
+
   validates :name, presence: true, length: { maximum: 35 }
-  validates :email, uniqueness: true, presence: true, length: { maximum: 100 }, format: { with: EMAIL_VALIDATION_REGEXP }
+  validates :email, uniqueness: true, presence: true, length: { maximum: 100 }
+
+  before_validation :set_name, on: :create
+
+  private
+
+  def set_name
+    self.name = "User №#{rand(777)}" if self.name.blank?
+  end
 end
