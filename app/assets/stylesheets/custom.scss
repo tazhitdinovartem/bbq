@@ -58,3 +58,9 @@ select {
     width: 50%;
   }
 }
+
+.field_with_errors {
+  input {
+    border-color: #dc3545;
+  }
+}
