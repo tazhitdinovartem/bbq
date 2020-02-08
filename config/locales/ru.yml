@@ -1,4 +1,11 @@
 ru:
+  controllers:
+    events:
+      created: 'Вы создали новое мероприятие'
+      updated: 'Вы обновили мероприятие'
+      destroyed: 'Вы удалили мероприятие :('
+    users:
+      updated: 'Вы обновили свой профиль'
   errors:
     zero: 'ошибок'
     one: 'ошибка'
