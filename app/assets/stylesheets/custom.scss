@@ -39,3 +39,22 @@
   padding: 1rem;
   border-radius: 5px;
 }
+form {
+  width: 50%;
+}
+#error_explanation, .field_with_errors {
+  color: #dc3545;
+}
+select {
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.375rem 0.75rem;
+}
+.col-12 {
+  & > .alert {
+    width: 50%;
+  }
+}

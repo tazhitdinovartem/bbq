@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
@@ -23,6 +23,7 @@
               <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>
             <% else %>
             <%= link_to 'Войти', new_user_session_path, class: 'nav-item nav-link'%>
+            <%= link_to 'Зарегистироваться', new_user_registration_path, class: 'nav-item nav-link' %>
             <% end %>
           </div>
         </div>
@@ -31,19 +32,14 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-        <% if flash.any? %>
-          <% flash.each do |name, message| %>
-            <% if notice %>
-              <div class="alert alert-success alert-dismissible fade show mt-2 mb-2" role="alert">
-                <%= message %>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %> alert alert-dismissible fade show mt-2 mb-2" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <% end %>
-          <% end %>
+              </button>
+              <div><%= value %></div>
+          </div>
         <% end %>
-
         <%= yield %>
       </div>
       </div>
