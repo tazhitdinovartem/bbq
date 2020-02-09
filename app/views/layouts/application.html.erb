@@ -19,11 +19,11 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <% if user_signed_in? %>
-              <%= link_to 'Профиль', current_user, class: 'nav-item nav-link' %>
-              <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>
+              <%= link_to "#{t('links.profile')}", current_user, class: 'nav-item nav-link' %>
+              <%= link_to "#{t('links.exit')}", destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>
             <% else %>
-            <%= link_to 'Войти', new_user_session_path, class: 'nav-item nav-link'%>
-            <%= link_to 'Зарегистироваться', new_user_registration_path, class: 'nav-item nav-link' %>
+            <%= link_to "#{t('links.login')}", new_user_session_path, class: 'nav-item nav-link'%>
+            <%= link_to "#{t('links.signup')}", new_user_registration_path, class: 'nav-item nav-link' %>
             <% end %>
           </div>
         </div>

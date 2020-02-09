@@ -1,11 +1,12 @@
-<h1>Регистрация</h1>
+<h1><%= t('page_header.signup') %></h1>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), novalidate: true) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.input :name, required: false %>
   <%= f.input :email, required: false %>
-  <%= f.input :password, label: "Пароль (минимум #{@minimum_password_length} символов)" %>
+  <%= f.input :password, label: "#{t('input_labels.password')} (#{@minimum_password_length} #{t('input_labels.char_min')})" %>
   <%= f.input :password_confirmation %>
-  <%= f.button :submit, "Зарегистрироваться", class: "btn-primary" %>
+  <%= f.button :submit, "#{t('buttons.signup')}", class: "btn-primary" %>
 <% end %>
 
 <div class="buffer-top">

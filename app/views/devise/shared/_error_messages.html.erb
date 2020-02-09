@@ -4,8 +4,8 @@
       <span aria-hidden="true">&times;</span>
     </button>
     <div class="lead buffer-bottom">
-      В вашей форме <%= resource.errors.count %>
-      <%= t('errors',:count => resource.errors.count) %> 
+      <%= t('errors.errors_count_text') %>
+      <%= t('errors', count: resource.errors.count) %> 
     </div>
     <% resource.errors.full_messages.each do |message| %>
       <div><%= message %></div>

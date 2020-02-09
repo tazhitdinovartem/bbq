@@ -4,6 +4,6 @@
   <%= f.input :address, required: false %>
   <div class="form-group"><%= f.datetime_select :datetime, class: 'form-control' %></div>
   <%= f.input :description %>
-  <%= f.button :submit, 'Сохранить', class: 'btn-primary' %>
-  или <%= link_to 'вернуться', events_path %>
+  <%= f.button :submit, "#{t('buttons.save')}", class: 'btn-primary' %>
+  <%= t('regular_text.or') %> <%= link_to "#{t('links.back')}", events_path %>
 <% end %>
