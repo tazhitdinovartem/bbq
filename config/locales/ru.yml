@@ -1,9 +1,14 @@
 ru:
+  confirms:
+    delete: 'Вы уверены?'
+  buttons:
+    edit: 'Изменить'
+    delete: 'Удалить'
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
       updated: 'Вы обновили мероприятие'
-      destroyed: 'Вы удалили мероприятие :('
+      destroyed: 'Вы удалили мероприятие'
     users:
       updated: 'Вы обновили свой профиль'
   errors:

@@ -4,6 +4,7 @@ body {
 
 .buffer-top {
   margin-top: 20px;
+  .btn { margin-right: 10px; } 
 }
 
 .buffer-bottom {
@@ -13,6 +14,7 @@ body {
 .buffer-both {
   margin-top: 20px;
   margin-bottom: 20px;
+  .btn { margin-right: 10px; } 
 }
 
 .img-icon, .img-icon-small {
