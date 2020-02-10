@@ -1,7 +1,7 @@
 <%= simple_form_for @user, html: {multipart: true} do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: @user} %>
+  <%= render partial: "partials/form_errors", locals: {model: @user} %>
   <%= f.input :name, required: false %>
   <%= f.input :email, required: false %>
-  <%= f.button :submit, "#{t('buttons.save')}", class: 'btn-primary' %>
-  <%= t('regular_text.or') %>  <%= link_to "#{t('links.back')}", :back %>
+  <%= f.button :submit, t("buttons.save"), class: "btn-primary" %>
+  <%= t("regular_text.or") %>  <%= link_to t("links.back"), :back %>
 <% end %>

@@ -1,9 +1,9 @@
 <%= simple_form_for(@event) do |f| %>
-  <%= render partial: 'partials/form_errors', locals: {model: @event} %>
+  <%= render partial: "partials/form_errors", locals: {model: @event} %>
   <%= f.input :title, required: false %>
   <%= f.input :address, required: false %>
-  <div class="form-group"><%= f.datetime_select :datetime, class: 'form-control' %></div>
+  <div class="form-group"><%= f.datetime_select :datetime, class: "form-control" %></div>
   <%= f.input :description %>
-  <%= f.button :submit, "#{t('buttons.save')}", class: 'btn-primary' %>
-  <%= t('regular_text.or') %> <%= link_to "#{t('links.back')}", events_path %>
+  <%= f.button :submit, t("buttons.save"), class: "btn-primary" %>
+  <%= t("regular_text.or") %> <%= link_to t("links.back"), event_path(@event) %>
 <% end %>

@@ -1,24 +1,24 @@
-<h1><%= t('page_header.change_password') %></h1>
+<h1><%= t("page_header.change_password") %></h1>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <%= f.input :email, required: false %>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <div><%= t("regular_text.currently_waiting") %> <%= resource.unconfirmed_email %></div>
   <% end %>
-  <%= f.input :password, label: "#{t('input_labels.edit_password')}" %>
+  <%= f.input :password, label: t("input_labels.edit_password") %>
   <%= f.input :password_confirmation %>
-  <%= f.input :current_password, label: "#{t('input_labels.current_password')}" %>
-  <%= f.button :submit, "#{t('buttons.edit')}", class: 'btn-primary' %>
+  <%= f.input :current_password, label: t("input_labels.current_password") %>
+  <%= f.button :submit, t("buttons.edit"), class: "btn-primary" %>
 <% end %>
 
 <div class="buffer-top">
-  <h3 class="mb-3"><%= t('page_header.delete_account') %></h3>
+  <h3 class="mb-3"><%= t("page_header.delete_account") %></h3>
   <div>
-    <%= button_to "#{t('buttons.delete')}", registration_path(resource_name), data: { confirm: I18n.t('confirms.delete') }, method: :delete, class: 'btn btn-danger' %>
+    <%= button_to t("buttons.delete"), registration_path(resource_name), data: { confirm: t("confirms.delete") }, method: :delete, class: "btn btn-danger" %>
   </div>
   <div class="buffer-top">
-    <%= link_to "#{t('links.back')}", user_path(@user) %>
+    <%= link_to t("links.back"), user_path(@user) %>
   </div>
 </div>

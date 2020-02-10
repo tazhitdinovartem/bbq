@@ -1,8 +1,10 @@
 ru:
+  app_name: 'Шашлыки'
   regular_text:
     or: 'или'
     organise: 'Организовал:'
     no_events_yet: 'Пользователь пока не организовал ни одного события'
+    currently_waiting: 'В настоящее время ожидается подтверждение:'
   links:
     back: 'Назад'
     have_account: 'Уже есть аккаунт? Войдите'

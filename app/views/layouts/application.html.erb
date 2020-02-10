@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BBQ App</title>
+    <title><%= t("app_name") %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_pack_tag "application" %>
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
       <div class="container">
-        <%= link_to 'BBQ', root_path, class: 'navbar-brand' %>
+        <%= link_to t("app_name"), root_path, class: "navbar-brand" %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <% if user_signed_in? %>
-              <%= link_to "#{t('links.profile')}", current_user, class: 'nav-item nav-link' %>
-              <%= link_to "#{t('links.exit')}", destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %>
+              <%= link_to t("links.profile"), current_user, class: "nav-item nav-link" %>
+              <%= link_to t("links.exit"), destroy_user_session_path, method: :delete, class: "nav-item nav-link" %>
             <% else %>
-            <%= link_to "#{t('links.login')}", new_user_session_path, class: 'nav-item nav-link'%>
-            <%= link_to "#{t('links.signup')}", new_user_registration_path, class: 'nav-item nav-link' %>
+            <%= link_to t("links.login"), new_user_session_path, class: "nav-item nav-link"%>
+            <%= link_to t("links.signup"), new_user_registration_path, class: "nav-item nav-link" %>
             <% end %>
           </div>
         </div>
