@@ -5,5 +5,5 @@
   <div class="form-group"><%= f.datetime_select :datetime, class: "form-control" %></div>
   <%= f.input :description %>
   <%= f.button :submit, t("buttons.save"), class: "btn-primary" %>
-  <%= t("regular_text.or") %> <%= link_to t("links.back"), event_path(@event) %>
+  <%= t("regular_text.or") %> <%= link_to t("links.back"), events_path %>
 <% end %>
