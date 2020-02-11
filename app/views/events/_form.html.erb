@@ -2,8 +2,9 @@
   <%= render partial: "partials/form_errors", locals: {model: @event} %>
   <%= f.input :title, required: false %>
   <%= f.input :address, required: false %>
-  <div class="form-group"><%= f.datetime_select :datetime, class: "form-control" %></div>
-  <input type="text" id="datepicker">
+  <div class="form-group">
+    <input type="text" id="datepicker" class="form-control" name="event[datetime]">
+  </div>
   <%= f.input :description %>
   <%= f.button :submit, t("buttons.save"), class: "btn-primary" %>
   <%= t("regular_text.or") %> <%= link_to t("links.back"), events_path %>
