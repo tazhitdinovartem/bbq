@@ -2,7 +2,7 @@
   <%= render partial: "partials/form_errors", locals: {model: @event} %>
   <%= f.input :title, required: false %>
   <%= f.input :address, required: false %>
-  <%= f.input :datetime, as: :string, required: false %>
+  <%= f.input :datetime, as: :string, required: false, readonly: true %>
   <%= f.input :description %>
   <%= f.button :submit, t("buttons.save"), class: "btn-primary" %>
   <%= t("regular_text.or") %> <%= link_to t("links.back"), events_path %>

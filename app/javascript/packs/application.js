@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
     locale: 'ru',
     position: 'right',
     stayOpen: true,
-    timeHours: 24,
+    timeHours: 0,
     timeMinutes: 0,
     weekStart: 1,
     dateStart: Date.now()
