@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function(){
     stayOpen: true,
     timeHours: 24,
     timeMinutes: 0,
-    weekStart: 1
+    weekStart: 1,
+    dateStart: Date.now()
   });
 });
 

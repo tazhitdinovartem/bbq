@@ -173,6 +173,13 @@
             time:   ["часов", "минут", "секунд"],
             header: ["Выберите месяц", "Выберите год", "Выберите Десятилетие", "Выберите время"]
         },
+        en: {
+            months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            days:   ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            shorts: ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"],
+            time:   ["Hours", "Minutes", "Seconds"],
+            header: ["Select a Month", "Select a Year", "Select a Decade", "Select a Time"]
+        },
         modify: function(locale, id, string){
             if(!(locale in this)){
                 return false;
