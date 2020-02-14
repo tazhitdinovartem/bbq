@@ -46,8 +46,10 @@ body {
   padding: 1rem;
   border-radius: 5px;
 }
-form {
-  width: 50%;
+.col-12 {
+  &>form {
+    width: 50%;
+  }
 }
 #error_explanation, .field_with_errors {
   color: #dc3545;
