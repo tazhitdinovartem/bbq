@@ -68,6 +68,8 @@ ru:
     few: '%{count} ошибки'
     other: '%{count} ошибок'
     errors_count_text: 'В вашей форме'
+    existing_email: 'Такой e-mail уже используется'
+    user_hisown_event: 'Вы не можете подписываться на собственные события'
   activerecord:
     models:
       user: 'Пользователь'

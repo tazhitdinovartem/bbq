@@ -10,10 +10,17 @@ class Subscription < ApplicationRecord
   validates :user, uniqueness: { scope: :event_id }, if: Proc.new{ |u| u.user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: Proc.new{ |u| u.user.present? }
   validate :check_email_attachment, unless: Proc.new { |u| u.user.present? }
+  validate :can_user_subscribe?, if: Proc.new { |u| u.user.present? }
+
+  def can_user_subscribe?
+    if event.user == user
+      errors.add(:base, I18n.t('errors.user_hisown_event'))
+    end
+  end
 
   def check_email_attachment
     if User.where(email: user_email).exists? 
-      errors.add(:email, 'уже используется')
+      errors.add(:base, I18n.t('errors.existing_email'))
     end
   end
 
