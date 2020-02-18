@@ -86,6 +86,8 @@ ru:
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         avatar: 'Аватар'
+      photo: 
+        photo: 'Фото'
       event:
         title: 'Название'
         address: 'Место проведения'
