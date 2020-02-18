@@ -2,6 +2,8 @@
   <%= render partial: "partials/form_errors", locals: {model: @user} %>
   <%= f.input :name, required: false %>
   <%= f.input :email, required: false %>
+  <%= f.input :avatar, as: :file %>
+  <div class="mt-3 mb-3"><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></div>
   <%= f.button :submit, t("buttons.save"), class: "btn-primary" %>
   <%= t("regular_text.or") %>  <%= link_to t("links.back"), :back %>
 <% end %>
