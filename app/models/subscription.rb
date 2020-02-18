@@ -12,6 +12,8 @@ class Subscription < ApplicationRecord
   validate :check_email_attachment, unless: Proc.new { |u| u.user.present? }
   validate :can_user_subscribe?, if: Proc.new { |u| u.user.present? }
 
+  private
+
   def can_user_subscribe?
     if event.user == user
       errors.add(:base, I18n.t('errors.user_hisown_event'))
