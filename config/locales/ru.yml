@@ -46,6 +46,7 @@ ru:
     signup: 'Зарегистрироваться'
     signin: 'Войти'
     save: 'Сохранить'
+    subscribe: 'Подписаться'
     create_event: 'Создать событие'
     upload: 'Загрузить'
   controllers:
@@ -67,6 +68,7 @@ ru:
       error: 'Что-то не так с фото'
       created: 'Фото добавлено к событию'
       destroyed: 'Вы удалили фото'
+      photo: 'Фото'
   errors:
     zero: '%{count} ошибок'
     one: '%{count} ошибка'
@@ -88,6 +90,9 @@ ru:
         avatar: 'Аватар'
       photo: 
         photo: 'Фото'
+      comment: 
+        user_name: 'Ваше имя'
+        body: 'Комментарий'
       event:
         title: 'Название'
         address: 'Место проведения'
