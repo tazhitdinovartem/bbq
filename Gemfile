@@ -23,10 +23,10 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'rails-i18n'
-# Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog-aws'
 
 group :production do
   gem 'pg'
