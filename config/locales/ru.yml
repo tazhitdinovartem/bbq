@@ -2,12 +2,15 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
   app_name: 'Шашлыки'
+
   regular_text:
     or: 'или'
     organise: 'Организовал:'
     no_events_yet: 'Пользователь пока не организовал ни одного события'
     currently_waiting: 'В настоящее время ожидается подтверждение:'
+
   links:
     back: 'Назад'
     have_account: 'Уже есть аккаунт? Войдите'
@@ -22,6 +25,7 @@ ru:
     exit: 'Выйти'
     login: 'Войти'
     signup: 'Зарегистироваться'
+
   page_header:
     forget_password?: 'Забыли пароль?'
     change_password: 'Сменить пароль'
@@ -32,13 +36,16 @@ ru:
     events: 'События'
     event_create: 'Создание события'
     user_edit: 'Редактирование профиля'
+
   input_labels:
     char_min: 'символов минимум'
     edit_password: 'Пароль (оставьте поле пустым, если не хотите менять)'
     current_password: 'Текущий пароль (нам нужен текущий пароль, чтобы подвердить изменения)'
     password: 'Пароль'
+
   confirms:
     delete: 'Вы уверены?'
+
   buttons:
     edit: 'Изменить'
     delete: 'Удалить'
@@ -49,6 +56,7 @@ ru:
     subscribe: 'Подписаться'
     create_event: 'Создать событие'
     upload: 'Загрузить'
+
   controllers:
     events:
       created: 'Вы создали новое мероприятие'
@@ -77,6 +85,7 @@ ru:
     errors_count_text: 'В вашей форме'
     existing_email: 'Такой e-mail уже используется'
     user_hisown_event: 'Вы не можете подписываться на собственные события'
+
   activerecord:
     models:
       user: 'Пользователь'
@@ -98,4 +107,20 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
   
