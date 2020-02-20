@@ -18,6 +18,7 @@ class EventMailer < ApplicationMailer
   def photo(event, photo, email)
     @event = event
     @photo = photo
+    attachments.inline["user.png"] = File.read("#{Rails.root}/app/assets/images/user.png")
     
     mail to: email, subject: "Добавлена фотография в #{event.title}"
   end
