@@ -14,4 +14,12 @@ class EventMailer < ApplicationMailer
 
     mail to: email, subject: "Новый комментарий в #{event.title}"
   end
+
+  def photo(event, photo, email)
+    @event = event
+    @photo = photo
+    attachments.inline["#{@photo.photo}"] = File.read("#{Rails.root}/public/#{@photo.photo}")
+    
+    mail to: email, subject: "Добавлена фотография в #{event.title}"
+  end
 end
