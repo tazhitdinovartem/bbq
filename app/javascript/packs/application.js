@@ -26,5 +26,12 @@ document.addEventListener("DOMContentLoaded", function(){
     weekStart: 1,
     dateStart: Date.now()
   });
+  $('form#new_photo .btn').hide();
+
+  $('form#new_photo').on('change','#photo_photo' , function(){
+  	if ($('#photo_photo').val()) {
+      $('form#new_photo .btn').show();
+    };
+  });
 });
 
