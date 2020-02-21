@@ -21,7 +21,7 @@ class EventMailer < ApplicationMailer
 
     if Rails.env.production?
       attachments.inline["#{@photo.photo}"] = 
-        File.read("https://bbqparty-bucket.s3.amazonaws.com/#{@photo.photo}")
+        File.read("#{@photo.photo}")
     end
 
     if Rails.env.development?
