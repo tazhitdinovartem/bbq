@@ -30,17 +30,18 @@
         <div class="event-photos-gallery">
           <%= render partial: 'photos/photo', collection: @event.photos.except(@new_photo) %>
         </div>
-        <div class="event-photo-form">
-          <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build } %>
-        </div>
+        <% if current_user.present? %>
+          <div class="event-photo-form mb-3">
+            <%= render partial: 'photos/form', locals: {photo: @new_photo || @event.photos.build } %>
+          </div>
+        <% end %>
       </div>
-      <div class="event-comments buffer-top">
-        <%= render partial: 'comments/form',
-          locals: {comment: @new_comment || @event.comments.build} %>
-        <div class="buffer-top">
+      <div class="event-comments">
+        <div>
           <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment) %>
         </div>
-        
+        <%= render partial: 'comments/form',
+          locals: {comment: @new_comment || @event.comments.build} %>
       </div>
     </div>
     <div class="col-md-4">
