@@ -50,6 +50,9 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  config.action_controller.asset_host = 'localhost:3000'
+  config.action_mailer.asset_host = 'http://localhost:3000'
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
