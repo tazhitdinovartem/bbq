@@ -1,8 +1,13 @@
-Новое фото
+<%= t '.title' %>
+<%= @photo.user.name %> <%= t '.author' %>
 
-----------------------
+<%= t '.event' %>
+<%= @event.title %>
 
-Событие: <%= @event.title %>
-Состоится: <%= l @event.datetime %>
-Организатор: <%= @event.user.name %>
-Фото: <%= @photo %>
+<%= t '.datetime' %>
+<%= l @event.datetime %>
+
+<%= t '.owner' %>
+<%= @event.user.name %>
+
+<%= image_tag(@photo.photo.url) %>

@@ -109,6 +109,10 @@ ru:
         description: 'Описание'
 
   event_mailer:
+    mail_subject:
+      subscribe_subject: 'Новая подписка на'
+      comment_subject: 'Новый комментарий в'
+      photo_subject: 'Добавлена фотография в'
     comment:
       title: 'Новый комментарий'
       author: 'Автор'
