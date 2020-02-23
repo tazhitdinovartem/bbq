@@ -2,7 +2,7 @@
 <%= @photo.user.name %> <%= t '.author' %>
 
 <%= t '.event' %>
-<%= @event.title %>
+<%= link_to @event.title, event_url(@event) %>
 
 <%= t '.datetime' %>
 <%= l @event.datetime %>
@@ -10,4 +10,4 @@
 <%= t '.owner' %>
 <%= @event.user.name %>
 
-<%= image_tag(@photo.photo.url) %>
+<%= link_to image_tag(@photo.photo.thumb.url), @photo.photo.url %>
