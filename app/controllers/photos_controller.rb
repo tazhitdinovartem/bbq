@@ -27,24 +27,24 @@ class PhotosController < ApplicationController
 
   private
 
-    def notify_subscribers(event, photo)
-      all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
-      all_emails -= [current_user.email] if current_user.present?
+  def notify_subscribers(event, photo)
+    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
+    all_emails -= [current_user.email] if current_user.present?
 
-      all_emails.each do |mail|
-        EventMailer.photo(event, photo, mail).deliver_now
-      end
+    all_emails.each do |mail|
+      EventMailer.photo(event, photo, mail).deliver_now
     end
+  end
 
-    def set_event
-      @event = Event.find(params[:event_id])
-    end
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
 
-    def set_photo
-      @photo = @event.photos.find(params[:id])
-    end
+  def set_photo
+    @photo = @event.photos.find(params[:id])
+  end
 
-    def photo_params
-      params.fetch(:photo, {}).permit(:photo)
-    end
+  def photo_params
+    params.fetch(:photo, {}).permit(:photo)
+  end
 end

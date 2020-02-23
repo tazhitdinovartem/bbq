@@ -37,7 +37,7 @@
         <% end %>
       </div>
       <div class="event-comments">
-        <div>
+        <div class="comments-collection">
           <%= render partial: 'comments/comment', collection: @event.comments.except(@new_comment) %>
         </div>
         <%= render partial: 'comments/form',

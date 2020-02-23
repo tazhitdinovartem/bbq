@@ -1,19 +1,16 @@
-<div class="buffer-bottom">
-  <p><%= comment.body %></p>
-  <p>
-    <span>
+<div class="comment-item">
+  <div class="comment-details">
+    <span class="comment-author">
       <% if comment.user.present? %>
         <%= render partial: 'users/user', object: comment.user %>
       <% else %>
-        <em><strong><%= comment.user_name %></strong></em>
+        <%= comment.user_name %>
       <% end %>
     </span>
-    <em><%= l comment.created_at, format: :short %></em>
+    <%= l comment.created_at, format: :short %>
     <% if current_user_can_edit?(comment) %>
-        <%= link_to(
-                fa_icon('trash'), event_comment_path(comment.event, comment),
-                method: :delete, data: {confirm: t('confirms.delete')}
-            ) %>
+        <%= link_to(fa_icon('trash'), event_comment_path(comment.event, comment),method: :delete, data: {confirm: t('confirms.delete')}, class: 'delete-comment') %>
     <% end %>
-  </p>
+  </div>
+  <div class="comment-body"><%= comment.body %></div>
 </div>
