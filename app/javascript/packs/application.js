@@ -16,22 +16,6 @@ require("bootstrap/dist/js/bootstrap")
 import DateTime from './datetime';
 window.DateTime = DateTime;
 
-document.addEventListener("DOMContentLoaded", function(){
-  DateTime("#event_datetime", {
-    locale: 'ru',
-    position: 'right',
-    stayOpen: true,
-    timeHours: 0,
-    timeMinutes: 0,
-    weekStart: 1,
-    dateStart: Date.now()
-  });
-  $('form#new_photo .btn').hide();
-
-  $('form#new_photo').on('change','#photo_photo' , function(){
-  	if ($('#photo_photo').val()) {
-      $('form#new_photo .btn').show();
-    };
-  });
-});
+import './map';
+import './main';
 

@@ -45,7 +45,12 @@
 .event-info-inner {
   background:rgba(0, 0, 0, 0.4);
 }
-
+.event-show-map {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+}
 .event-map {
   margin: 20px 0;
   width: 100%;
