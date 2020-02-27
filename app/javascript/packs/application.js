@@ -8,6 +8,8 @@ require("@rails/activestorage").start()
 require("channels")
 require("ekko-lightbox/ekko-lightbox")
 require("./lightslider")
+require("imagesloaded/imagesloaded")
+
 import DateTime from './datetime';
 window.DateTime = DateTime;
 

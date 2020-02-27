@@ -27,8 +27,11 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     // lightSlider initialization
-    $('.event-photos-gallery').lightSlider({
-      autoWidth: true,
-      enableDrag: false
-    })
+    $('.event-photos').imagesLoaded( function() {
+      $('.event-photos-gallery').lightSlider({
+        autoWidth: true,
+        enableDrag: false
+      })
+    });
+    
   });
