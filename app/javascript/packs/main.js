@@ -19,4 +19,10 @@ document.addEventListener("DOMContentLoaded", function(){
         $('form#new_photo .btn').show();
       };
     });
+    // Lightbox initialization
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+
   });

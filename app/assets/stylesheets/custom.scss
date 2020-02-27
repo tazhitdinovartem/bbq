@@ -119,3 +119,9 @@ select {
     font-weight: bold;
   }
 }
+.event-photos-gallery {
+  .event-photo {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+  }
+}
