@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require("ekko-lightbox/ekko-lightbox")
-
+require("./lightslider")
 import DateTime from './datetime';
 window.DateTime = DateTime;
 
