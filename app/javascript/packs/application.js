@@ -16,5 +16,6 @@ require("bootstrap/dist/js/bootstrap")
 import DateTime from './datetime';
 window.DateTime = DateTime;
 
+import './map';
 import './main';
 
