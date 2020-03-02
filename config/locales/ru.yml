@@ -39,12 +39,14 @@ ru:
     events: 'События'
     event_create: 'Создание события'
     user_edit: 'Редактирование профиля'
+    pincode: 'Доступ только по пин-коду'
 
   input_labels:
     char_min: 'символов минимум'
     edit_password: 'Пароль (оставьте поле пустым, если не хотите менять)'
     current_password: 'Текущий пароль (нам нужен текущий пароль, чтобы подвердить изменения)'
     password: 'Пароль'
+    pincode: 'Введите пин-код:'
 
   confirms:
     delete: 'Вы уверены?'
@@ -65,6 +67,7 @@ ru:
       created: 'Вы создали новое мероприятие'
       updated: 'Вы обновили мероприятие'
       destroyed: 'Вы удалили мероприятие'
+      wrong_pincode: 'Неверный пин-код!'
     users:
       updated: 'Вы обновили свой профиль'
     comments:
@@ -80,6 +83,7 @@ ru:
       created: 'Фото добавлено к событию'
       destroyed: 'Вы удалили фото'
       photo: 'Фото'
+
   errors:
     zero: '%{count} ошибок'
     one: '%{count} ошибка'
@@ -110,6 +114,7 @@ ru:
         address: 'Место проведения'
         datetime: 'Дата и время'
         description: 'Описание'
+        pincode: 'Пин-код доступа'
 
   event_mailer:
     mail_subject:
