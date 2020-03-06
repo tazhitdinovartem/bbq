@@ -27,7 +27,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
+/config/database.yml
 /public/packs
 /public/packs-test
 /node_modules
@@ -35,4 +35,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-/config/environments/development.rb
+/config/environments/development.rbsendgrid.env
+sendgrid.env

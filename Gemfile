@@ -27,7 +27,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
-
+gem 'listen', '>=3.0.5', '<3.2'
+gem 'sqlite3', '~> 1.4'
+gem 'sendgrid-ruby'
 group :production do
   gem 'pg'
 end
