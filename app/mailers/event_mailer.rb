@@ -6,8 +6,8 @@ class EventMailer < ApplicationMailer
     @event = event
 
     mail to: event.user.email,
-	 from: "BbqParty <admin@bbqparty.fun>",
-         subject: "#{t("event_mailer.mail_subject.subscribe_subject")} #{event.title}"
+	  from: "BbqParty <admin@bbqparty.site>",
+    subject: "#{t("event_mailer.mail_subject.subscribe_subject")} #{event.title}"
   end
 
   def comment(event, comment, email)
@@ -15,8 +15,8 @@ class EventMailer < ApplicationMailer
     @event = event
 
     mail to: email,
-	 from: "BbqParty <admin@bbqparty.fun>", 
-         subject: "#{t("event_mailer.mail_subject.comment_subject")} #{event.title}"
+	  from: "BbqParty <admin@bbqparty.site>", 
+    subject: "#{t("event_mailer.mail_subject.comment_subject")} #{event.title}"
   end
 
   def photo(event, photo, email)
@@ -24,7 +24,7 @@ class EventMailer < ApplicationMailer
     @photo = photo
 
     mail to: email,
-	 from: "BbqParty <admin@bbqparty.fun>", 
-         subject: "#{t("event_mailer.mail_subject.photo_subject")} #{event.title}"
+	  from: "BbqParty <admin@bbqparty.site>", 
+    subject: "#{t("event_mailer.mail_subject.photo_subject")} #{event.title}"
   end
 end
