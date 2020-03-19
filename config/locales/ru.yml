@@ -1,7 +1,11 @@
 ru:
+  pundit:
+    not_authorized: 'Для просмотра события вам необходимо авторизоваться'
+
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+
   photos:
     photo:
       destroy_confirm: 'Удалить фото?'
