@@ -31,6 +31,7 @@ gem 'listen', '>=3.0.5', '<3.2'
 gem 'sqlite3', '~> 1.4'
 gem 'sendgrid-ruby'
 gem 'pundit'
+gem 'resque'
 
 group :production do
   gem 'pg'

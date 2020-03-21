@@ -41,12 +41,12 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:body, :user_name)
   end
 
-  def notify_subscribers(event, comment)
+  def notify_subscribers(event, new_comment)
     all_emails = (event.subscriptions.map(&:user_email) + [event.user.email]).uniq
     all_emails -= [current_user.email] if current_user.present?
     
     all_emails.each do |mail|
-      EventMailer.comment(event, comment, mail).deliver_now
+      NewCommentEmailNotifyJob.perform_later(event, new_comment, mail)
     end
   end
 end
