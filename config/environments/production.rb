@@ -124,4 +124,7 @@ Rails.application.configure do
     domain: 'heroku.com',
     enable_starttls_auto: true
   }
+
+  config.active_job.queue_adapter = :resque
+  config.active_job.queue_name_prefix = "bbqparty_#{Rails.env}"
 end
