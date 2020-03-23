@@ -46,7 +46,7 @@ class CommentsController < ApplicationController
     all_emails -= [current_user.email] if current_user.present?
     
     all_emails.each do |mail|
-      EmailNotifyJob.perform_later('comment', event, new_comment, mail)
+      EmailNotifyJob.perform_later(event, new_comment, mail)
     end
   end
 end

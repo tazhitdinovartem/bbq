@@ -32,7 +32,7 @@ class PhotosController < ApplicationController
     all_emails -= [current_user.email] if current_user.present?
 
     all_emails.each do |mail|
-      EmailNotifyJob.perform_later('photo', event, photo, mail)
+      EmailNotifyJob.perform_later(event, photo, mail)
     end
   end
 
