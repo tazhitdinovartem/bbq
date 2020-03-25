@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   helper_method :current_user_can_edit?
+  helper_method :all_emails
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(
@@ -14,6 +15,12 @@ class ApplicationController < ActionController::Base
       :sign_up,
       keys: [:name, :email, :password, :password_confirmation]
     )
+  end
+
+  def all_emails
+    all_emails = (@event.subscriptions.map(&:user_email) + [@event.user.email]).uniq
+    all_emails -= [current_user.email] if current_user.present?
+    all_emails.join(", ")
   end
 
   # Вспомогательный метод, возвращает true, если текущий залогиненный юзер

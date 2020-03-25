@@ -1,11 +1,11 @@
 class EmailNotifyJob < ApplicationJob
   queue_as :default
-  def perform(event, obj, mail = nil)
+  def perform(event, obj, emails = nil)
     case obj
     when Comment
-      EventMailer.comment(event, obj, mail).deliver_later
+      EventMailer.comment(event, obj, emails).deliver_later
     when Photo
-      EventMailer.photo(event, obj, mail).deliver_later
+      EventMailer.photo(event, obj, emails).deliver_later
     when Subscription
       EventMailer.subscription(event, obj).deliver_later
     end
