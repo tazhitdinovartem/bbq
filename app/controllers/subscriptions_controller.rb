@@ -37,7 +37,6 @@ class SubscriptionsController < ApplicationController
   end
 
   def subscription_params
-    # .fetch разрешает в params отсутствие ключа :subscription
     params.fetch(:subscription, {}).permit(:user_email, :user_name)
   end
 end
